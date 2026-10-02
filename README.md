@@ -1,10 +1,10 @@
-#Mini ERP + CRM Operations Portal
+# Mini ERP + CRM Operations Portal
 
 A full-stack web application for managing customers, products, inventory, stock movements, and sales challans for a wholesale/distribution business.
 
 This project was developed as a practical full-stack case study with a focus on clean REST APIs, role-based access, database design, inventory validation, and a simple admin-style interface.
 
-Features
+# Features
 
 Authentication and Roles
 
@@ -20,7 +20,7 @@ Add and edit customers
 
 Search customers
 
-Customer details:
+# Customer details:
 
 Name
 
@@ -40,7 +40,7 @@ Status
 
 Follow-up date
 
-Notes
+# Notes
 
 Products and Inventory
 
@@ -80,7 +80,7 @@ Insufficient stock returns an appropriate API error
 
 Product name, SKU, and price are stored as snapshots in challan items
 
-Tech Stack
+# Tech Stack
 
 Backend
 
@@ -118,7 +118,7 @@ Database
 
 PostgreSQL is used for the application database. The current setup uses Neon PostgreSQL.
 
-Project Structure
+# Project Structure
 
 mini-erp-crm/
 ├── backend/
@@ -144,7 +144,7 @@ mini-erp-crm/
     ├── package.json
     └── ...
 
-Database Design
+# Database Design
 
 Main tables:
 
@@ -162,7 +162,7 @@ challan_items
 
 The main relationships support the business flow between users, customers, products, stock movements, and sales challans.
 
-Business Flow
+# Business Flow
 
 Login
   ↓
@@ -188,7 +188,7 @@ Challan becomes CONFIRMED
 
 If the requested quantity is greater than the available stock, confirmation is rejected and the stock remains unchanged.
 
-API Overview
+# Overview
 
 Authentication
 
@@ -222,7 +222,7 @@ POST /challans/:id/confirm
 
 The API uses validation, authentication, authorization, and appropriate HTTP error responses.
 
-Local Setup
+# Local Setup
 
 Prerequisites
 
@@ -232,7 +232,7 @@ npm
 
 PostgreSQL-compatible database
 
-Git
+# Git
 
 Clone the repository
 
@@ -274,7 +274,7 @@ npm run dev
 
 Use the local frontend URL shown by Vite.
 
-Environment Variables
+# Environment Variables
 
 Backend
 
@@ -316,7 +316,7 @@ Database
 
 The application uses PostgreSQL. Neon PostgreSQL can be used as the hosted database.
 
-Testing
+# Testing
 
 The following important flows were tested during development:
 
@@ -340,7 +340,7 @@ Insufficient stock validation
 
 Negative stock prevention
 
-Challan details
+# Challan details
 
 Product snapshot information in challan items
 
@@ -353,7 +353,7 @@ Result:
 Challan confirmation rejected
 Stock remains: 15
 
-Security
+# Security
 
 Passwords are stored as hashes.
 
@@ -377,7 +377,7 @@ git add .
 git commit -m "Add stock movement management"
 git push
 
-Known Limitations
+# Known Limitations
 
 This is a focused ERP/CRM case-study implementation rather than a complete enterprise ERP system.
 
@@ -399,7 +399,7 @@ GitHub Actions CI/CD
 
 More advanced CRM follow-up management
 
-Project Goal
+# Project Goal
 
 The project demonstrates a complete business workflow from frontend to backend and database:
 
